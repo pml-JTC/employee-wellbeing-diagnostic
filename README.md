@@ -33,7 +33,7 @@ The tool expects a local file named `data.csv` in the same directory to fetch re
 Run the script from your terminal:
 
 ```bash
-python main.py
+python project.py
 ```
 
 ### Example Walkthrough
