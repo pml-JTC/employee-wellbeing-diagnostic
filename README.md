@@ -1,15 +1,18 @@
 # Employee Well-Being Diagnostic Tool
 
-A command-line interface (CLI) application that calculates burnout and mental health risk scores for employees. It analyzes labor burden, local cost-of-living metrics, and demographic stress factors, then outputs a formatted visual report using the `rich` library.
+A command-line interface (CLI) application that calculates burnout and mental health risk scores for employees. This prototype sketch serves as a baseline for a more intricate and responsive tool that would use live data and be tailored to specific parameters for different companies or organizations interested in optimizing the productivity of their teams. It analyzes labor burden, local cost-of-living metrics, and demographic stress factors, then outputs a formatted visual report using the `rich` library. (This sketch uses a local data csv in place of an online database to keep things simple.)
+
+My interest in this project comes from a deep interest in advancing mental healthcare from a field that contains or defines people without considering first and foremost their economic viability. The true measure of "functional" has to be with respect to one's ability to hold down a job, and conversely, without means a person cannot hope to maintain true mental health for very long. Employers could use a more complex, individualized version of this prototype sketch to ensure that their employees are not working in conditions that lead to burnout. Advances in computational psychiatry are already driving employer-led initiatives into maintaining the mental health of their own workforces, without deferring to the insurance gate-keeping still tightly linked to the APA's DSM coding system. As long as that infrastructure is in place, workforces and the profit their work produces will be exposed to unnecessary risk. This tool can serve as a starting point for iterating useful tools tailored to specific companies. A company's fiscal health cannot be decoupled from the mental well-being of its employees.
 
 #### Video Demo:  <URL HERE>
+
 
 ## Features
 
 - **Local Cost-of-Living Integration**: Pulls average rent and salary data from a CSV file to evaluate local economic stress.
 - **Risk Score Algorithm**: Calculates a metric from 0 to 100 based on International Labour Organization (ILO) standards for working hours, rent-to-income ratios, and age brackets.
-- **Strict Input Validation**: Validates user inputs (age, income, hours, city names) to prevent faulty analysis.
-- **Rich Terminal UI**: Generates clean visual progress bars, tabular reports, and color-coded status panels.
+- **Strict Input Validation**: Validates user inputs (age, income, hours, city names) to prevent faulty analysis (these parameters would be tailored to each client's needs in a product version).
+- **Rich Terminal UI**: Generates clean visual progress bars, tabular reports, and color-coded status panels (a product version would generate a dashboard on a proper web/app UI).
 
 ## Prerequisites
 
@@ -27,6 +30,12 @@ The tool expects a local file named `data.csv` in the same directory to fetch re
 - `median_salary_net_usd_monthly`
 
 *Note: If `data.csv` is missing or empty, the application will automatically fall back to standard baseline metrics.*
+
+
+## Prototype Scope & Boundaries
+- **Geographic Data Limitation**: Because this prototype is restricted to offline execution, `data.csv` contains a sample dataset of US regional metrics.
+- **Input Validation**: The current string validation ensures structural integrity (characters only). It does not validate global geographic accuracy (e.g., matching "Oslo, Sweden"). In a production version, this boundary would be resolved by replacing the local CSV lookup with a live global geolocation API.
+
 
 ## Usage
 
@@ -64,6 +73,16 @@ python project.py
 - `get_assessment()`: Maps the numerical score to text classifications.
 - `generate_visual_score()`: Builds the terminal ASCII progress bar.
 - `main()`: Controls user input flow, input parsing, error handling, and UI rendering.
+
+## Testing
+To run the automated test suite, ensure you have `pytest` installed:
+```bash
+pip install pytest
+```
+Execute the tests from the root directory:
+```bash
+pytest test_project.py
+```
 
 ## License
 
