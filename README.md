@@ -4,7 +4,7 @@ A command-line interface (CLI) application that calculates burnout and mental he
 
 My interest in this project comes from a deep interest in advancing mental healthcare from a field that contains or defines people without considering first and foremost their economic viability. The true measure of "functional" has to be with respect to one's ability to hold down a job, and conversely, without means a person cannot hope to maintain true mental health for very long. Employers could use a more complex, individualized version of this prototype sketch to ensure that their employees are not working in conditions that lead to burnout. Advances in computational psychiatry are already driving employer-led initiatives into maintaining the mental health of their own workforces, without deferring to the insurance gate-keeping still tightly linked to the APA's DSM coding system. As long as that infrastructure is in place, workforces and the profit their work produces will be exposed to unnecessary risk. This tool can serve as a starting point for iterating useful tools tailored to specific companies. A company's fiscal health cannot be decoupled from the mental well-being of its employees.
 
-#### Video Demo: 
+#### Video Demo: [![Watch the video](https://youtu.be/wyHFZK-VnnI)](https://youtu.be/wyHFZK-VnnI)
 
 ## Features
 
